@@ -16,6 +16,9 @@ public class PanelsOpener : MonoBehaviour
     //[SerializeField] Transform activePosition;
     [SerializeField] Transform finishGamePanel;
 
+    [SerializeField] CreditsScroller creditsScroller;
+    [SerializeField] BugReportSender bugReportSender;
+
     [Header("Sound Manager")]
     [SerializeField] SoundManager soundManager;
 
@@ -58,7 +61,7 @@ public class PanelsOpener : MonoBehaviour
         openPanel(nextToOpen);
         ShowOnForeground(nextToOpen);
         currentlyOpened = nextToOpen;
-
+        PanelsUpdated?.Invoke();
     }
 
     public void ChooseEscapeActions()
@@ -67,6 +70,7 @@ public class PanelsOpener : MonoBehaviour
         {
             CloseCurrentPanel();
             nextToOpen = null;
+            PanelsUpdated?.Invoke();
             //cameraVolumeController.UnBlurScreen();
         }
         else
@@ -148,13 +152,16 @@ public class PanelsOpener : MonoBehaviour
     public void OpenCredits()
     {
         nextToOpen = creditsPanel;
+        
         DecideNextState();
+        creditsScroller.StartScrollingView();
     }
 
     public void OpenBugReportPanel()
     {
         nextToOpen = bugReportPanel;
         DecideNextState();
+        bugReportSender.RefreshNotificationsVisibility();
     }
 
     public void OpenExitPanel()

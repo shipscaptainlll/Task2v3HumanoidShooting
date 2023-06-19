@@ -27,6 +27,14 @@ MonoBehaviour:
     m_Key: BugReport_Send
     m_Metadata:
       m_Items: []
+  - m_Id: 317222526832640
+    m_Key: BugReport_ReportWasSent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317249911443456
+    m_Key: BugReport_ThanksForReport
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

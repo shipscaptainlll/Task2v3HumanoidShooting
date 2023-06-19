@@ -30,6 +30,15 @@ MonoBehaviour:
     m_Localized: Envia
     m_Metadata:
       m_Items: []
+  - m_Id: 317222526832640
+    m_Localized: El informe ha sido enviado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317249911443456
+    m_Localized: "\xA1Gracias por tus comentarios! Nos aseguraremos de que esto no
+      vuelva a suceder."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

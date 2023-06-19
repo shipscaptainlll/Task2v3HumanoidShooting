@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-
+using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
+    [SerializeField] AudioMixerGroup masterMixer;
     public Sound[] sounds;
 
     public static SoundManager instance;
@@ -28,7 +29,7 @@ public class SoundManager : MonoBehaviour
         {
             sound.source = gameObject.AddComponent<AudioSource>();
             sound.source.clip = sound.clip;
-
+            sound.source.outputAudioMixerGroup = sound.audioMixerGroup;
             sound.source.volume = sound.volume;
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
@@ -38,6 +39,13 @@ public class SoundManager : MonoBehaviour
             sound.source.minDistance = sound.minDistance;
             sound.source.maxDistance = sound.maxDistance;
         }
+
+        
+    }
+
+    void Start()
+    {
+        UploadPlayerPrefs();
     }
 
     public void Play(string name)
@@ -96,5 +104,14 @@ public class SoundManager : MonoBehaviour
         }
 
         return null;
+    }
+
+    public void UploadPlayerPrefs()
+    {
+        float musicVolume = PlayerPrefs.GetFloat("musicVolume", 0.01f);
+        masterMixer.audioMixer.SetFloat("MusicVol", Mathf.Log10(musicVolume) * 20);
+
+        float sfxVolume = PlayerPrefs.GetFloat("sfxVolume", 0.01f);
+        masterMixer.audioMixer.SetFloat("SfxVol", Mathf.Log10(sfxVolume) * 20);
     }
 }

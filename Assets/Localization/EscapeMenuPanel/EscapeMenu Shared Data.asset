@@ -39,6 +39,10 @@ MonoBehaviour:
     m_Key: EscapeMenu_Resume
     m_Metadata:
       m_Items: []
+  - m_Id: 295648813830144
+    m_Key: EscapeMenu_CurrentLanguage
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

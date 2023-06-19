@@ -1,22 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CreditsScroller : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Animator creditsAnimator;
+
 
     public void StartScrollingView()
     {
-
+        creditsAnimator.Play("CreditsScrolling", -1, 0f);
     }
 
-    IEnumerator ScrollView()
-    {
-        yield return null;
-    }
 }

@@ -17,7 +17,19 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: c06df7c469c78e04895bd7ab8fdbcb25, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 87317467136
+    m_Localized: 'Bist du sicher? '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141457543168
+    m_Localized: Ja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148352978944
+    m_Localized: Nein
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -30,6 +30,15 @@ MonoBehaviour:
     m_Localized: Enviar
     m_Metadata:
       m_Items: []
+  - m_Id: 317222526832640
+    m_Localized: "Relat\xF3rio foi enviado"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317249911443456
+    m_Localized: "Obrigado pelo seu feedback! Vamos garantir que isso nunca mais
+      aconte\xE7a."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

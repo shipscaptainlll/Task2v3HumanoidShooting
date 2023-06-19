@@ -19,6 +19,8 @@ public class Sound
     [Range(0f, 1f)]
     public float spatialBlend;
 
+    public AudioMixerGroup audioMixerGroup;
+
     public AudioRolloffMode audioRolloffMode;
 
     public AudioSourceCurveType audioSourceCurveType;
