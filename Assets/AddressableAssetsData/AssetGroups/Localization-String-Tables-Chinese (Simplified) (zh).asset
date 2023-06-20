@@ -17,36 +17,31 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: e87d8aa31645d7946ab38ef34b211873
   m_SerializeEntries:
-  - m_GUID: 26889058a3e79d244983b1ada0d329e6
-    m_Address: Credits_zh
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-zh
-    - Preload
   - m_GUID: 0ce30d6a33ea40348aea560f74b386df
     m_Address: EscapeMenu_zh
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-zh
-    - Preload
+  - m_GUID: 26889058a3e79d244983b1ada0d329e6
+    m_Address: Credits_zh
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh
   - m_GUID: 7f2439e383b9aea429393691687d7e5b
     m_Address: BugReportPanel_zh
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-zh
-    - Preload
-  - m_GUID: da10e6ae4aeb5bb40b2fbf580e0c8d0e
-    m_Address: ExitGamePanel_zh
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-zh
-    - Preload
   - m_GUID: 75930ccbfb2988b4eb0935ec43c13937
     m_Address: FinishGamePanel_zh
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-zh
-    - Preload
+  - m_GUID: da10e6ae4aeb5bb40b2fbf580e0c8d0e
+    m_Address: ExitGamePanel_zh
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 75a3e4975301f1a42992b4108ba88977, type: 2}
   m_SchemaSet:

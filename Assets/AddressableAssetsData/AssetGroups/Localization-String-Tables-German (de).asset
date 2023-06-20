@@ -17,36 +17,31 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 5085b38ae1258634f855d219fadffc5c
   m_SerializeEntries:
-  - m_GUID: 044037026046a514dbe28a4b58273745
-    m_Address: Credits_de
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-de
-    - Preload
-  - m_GUID: 8bc6f8246e921cf45864b1f3919e1b3f
-    m_Address: EscapeMenu_de
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-de
-    - Preload
-  - m_GUID: e8ce75df2164f1849844e91131cafb9e
-    m_Address: BugReportPanel_de
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-de
-    - Preload
   - m_GUID: 027e5a5483b195d48ace59a1751e3ca3
     m_Address: ExitGamePanel_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de
-    - Preload
+  - m_GUID: 044037026046a514dbe28a4b58273745
+    m_Address: Credits_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
   - m_GUID: ff0ead3b284101d44be66ce14e35d945
     m_Address: FinishGamePanel_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de
-    - Preload
+  - m_GUID: e8ce75df2164f1849844e91131cafb9e
+    m_Address: BugReportPanel_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 8bc6f8246e921cf45864b1f3919e1b3f
+    m_Address: EscapeMenu_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 75a3e4975301f1a42992b4108ba88977, type: 2}
   m_SchemaSet:

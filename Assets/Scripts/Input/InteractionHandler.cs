@@ -8,7 +8,7 @@ public class InteractionHandler : MonoBehaviour
     [SerializeField] UserInputListener userInputListener;
     [SerializeField] LayerMask targetLayer;
 
-    [SerializeField] SoundManager soundManager;
+    //[SerializeField] SoundManager soundManager;
 
     //public event Action CoinClicked = delegate { };
 

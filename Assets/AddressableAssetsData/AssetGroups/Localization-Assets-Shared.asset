@@ -17,20 +17,20 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 6dac027a1199a50408702b76af6f0e3f
   m_SerializeEntries:
-  - m_GUID: 7d904542ccdabe545b47706cce235ced
-    m_Address: Assets/Localization/UI/New Table Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
   - m_GUID: f35e230adc1f4cf468dcffa6764da57d
-    m_Address: Assets/Localization/EscapeMenuPanel/New Table 1 Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-  - m_GUID: a0ca6bbcbe8646147be002b4686f4761
-    m_Address: Assets/Localization/BugReportPanel/New Table Shared Data.asset
+    m_Address: Assets/Localization/EscapeMenuPanel/EscapeMenu Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
   - m_GUID: c06df7c469c78e04895bd7ab8fdbcb25
-    m_Address: Assets/Localization/ExitGamePanel/New Table 1 Shared Data.asset
+    m_Address: Assets/Localization/ExitGamePanel/ExitGamePanel Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: a0ca6bbcbe8646147be002b4686f4761
+    m_Address: Assets/Localization/BugReportPanel/BugReportPanel Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 7d904542ccdabe545b47706cce235ced
+    m_Address: Assets/Localization/CreditsPanel/Credits Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
   - m_GUID: a80606d6310001444a8f0c24de6fc10e

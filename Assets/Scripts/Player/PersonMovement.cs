@@ -16,6 +16,10 @@ public class PersonMovement : MonoBehaviour
     bool isGrounded;
     float verticalSpeed;
 
+
+    [SerializeField] Animator characterAnimator;
+    private string currentState;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +29,8 @@ public class PersonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
@@ -32,14 +38,17 @@ public class PersonMovement : MonoBehaviour
 
         isGrounded = (Physics.CheckSphere(checkGround.position, checkRadius, checkLayer));
 
+
         if (direction.magnitude >= 0.1f)
         {
+            ChangeAnimationState("Run");
+
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
 
-            
+
 
             Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             verticalSpeed -= gravity;
@@ -48,11 +57,34 @@ public class PersonMovement : MonoBehaviour
                 verticalSpeed = 0;
             }
 
-            
+
             moveDirection.y = verticalSpeed;
 
             characterController.Move(moveDirection * speed * Time.deltaTime);
+        } else
+        {
+            ChangeAnimationState("Idle");
         }
-        
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            PlayAttackAnimation();
+        }
+
     }
+
+    void ChangeAnimationState(string newState)
+    {
+        if (currentState == newState) return;
+
+        characterAnimator.CrossFade(newState, 0.1f, 0);
+
+        currentState = newState;
+    }
+
+    void PlayAttackAnimation()
+    {
+        characterAnimator.Play("Attack", 1, 0.1f);
+    }
+
 }
