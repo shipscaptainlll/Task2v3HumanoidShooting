@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PersonMovement : MonoBehaviour
 {
+    PlayerInput playerInput;
     [SerializeField] CharacterController characterController;
     [SerializeField] Transform cam;
     [SerializeField] Transform checkGround;
@@ -23,16 +25,17 @@ public class PersonMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        playerInput = GetComponent<PlayerInput>();
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Vector2 inputFromStick = playerInput.actions["Move"].ReadValue<Vector2>();
 
-
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        float horizontal = inputFromStick.x;
+        float vertical = inputFromStick.y;
 
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
@@ -66,12 +69,8 @@ public class PersonMovement : MonoBehaviour
             ChangeAnimationState("Idle");
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            PlayAttackAnimation();
-        }
-
     }
+
 
     void ChangeAnimationState(string newState)
     {
@@ -82,7 +81,7 @@ public class PersonMovement : MonoBehaviour
         currentState = newState;
     }
 
-    void PlayAttackAnimation()
+    public void PlayAttackAnimation()
     {
         characterAnimator.Play("Attack", 1, 0.1f);
     }

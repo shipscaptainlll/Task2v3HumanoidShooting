@@ -6,17 +6,24 @@ using UnityEngine.UI;
 
 public class VolumeChanger : MonoBehaviour
 {
+    
     [SerializeField] AudioMixerGroup masterMixer;
     [SerializeField] Slider musicSlider;
     [SerializeField] Slider sfxSlider;
 
+    
     float musicVolume;
     float sfxVolume;
+
+    //rewrite
+    [SerializeField] Transform rootObject;
+
 
     // Start is called before the first frame update
     void Awake()
     {
         UploadPlayerPrefs();
+        rootObject.gameObject.SetActive(false);
     }
 
     public void UpdateMusicVolume(Slider slider)

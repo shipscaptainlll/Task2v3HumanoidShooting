@@ -30,7 +30,7 @@ public class CursorManager : MonoBehaviour
 
     public static void ForceCursorDisabled()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void CheckSomethingOpened()
@@ -40,6 +40,6 @@ public class CursorManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
             somethingOpened = true;
         }
-        else { Cursor.lockState = CursorLockMode.Locked; somethingOpened = false; }
+        else { Cursor.lockState = CursorLockMode.Confined; somethingOpened = false; }
     }
 }
